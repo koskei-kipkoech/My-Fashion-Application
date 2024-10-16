@@ -6,6 +6,7 @@
     <title>Fashion Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <header class="header">
@@ -19,7 +20,7 @@
         </nav>
         <div class="icons">
             <div class="fas fa-bars" id="menu-bar"></div>
-            <div class="fa-duotone fa-solid fa-bookmark" id="save-bar"></div>
+            <div class="fa-duotone fa-solid fa-bookmark" id="save-bar"><p id="count">0</p></div>
             <div class="fas fa-search" id="search-bar"></div>
         </div>
         <div class="search-box">
@@ -31,31 +32,16 @@
             <div class="shopping-box">
                 <i class="fas fa-times"></i>
                 <img src="images/new3.jpg" alt="">
-                <div class="shop-content">
-                    <h3>Online Shopping</h3>
-                    <span class="quantity"> 1 </span>
-                    <span class="multiply"> * </span>
-                    <span class="quantity"> $3.00 </span>
-                </div>
-            </div>
-            <div class="shopping-box">
-                <i class="fas fa-times"></i>
-                <img src="images/new3.jpg" alt="">
-                <div class="shop-content">
-                    <h3>Online Shopping</h3>
-                    <span class="quantity">1</span>
-                    <span class="multiply">*</span>
-                    <span class="quantity">$3.00</span>
-                </div>
-            </div>
-            <div class="shopping-box">
-                <i class="fas fa-times"></i>
-                <img src="images/new3.jpg" alt="">
-                <div class="shop-content">
-                    <h3>Online Shopping</h3>
-                    <span class="quantity">1</span>
-                    <span class="multiply"> * </span>
-                    <span class="quantity">$3.00</span>
+                <div class="container">
+                    <div id="root"></div>
+                    <div class="sidebar">
+                        <div class="head"><p>my cart</p></div>
+                        <div cardItem>your cart is empty</div>
+                        <div class="foot">
+                            <h3>total</h3>
+                            <h2 id="total">$0.00</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,52 +49,153 @@
     </header>
     <!--maininto image ended -->
     <div class="main-background">
-        <div class="left-back"></div>
-
         <div class="left-back">
             <div class="left-inner">
                 <div class="right-content">
-                    <h1>summer <br>collection</h1>
-                    <p>Welcome to KFashion <br> Your ultimate destination for seasonal fashion inspiration! Discover the latest trends and timeless styles tailored for every season. From vibrant summer ensembles to cozy winter wear, our curated collections feature outfits that celebrate the unique beauty of each season. Explore a wide range of styles, find tips on how to mix and match, and stay ahead of the fashion curve.</p>
+                    <h1>KFashion <br>collection</h1>
+                    <p>Your ultimate destination for seasonal fashion inspiration!<br> Discover the latest trends and timeless styles tailored for every season. <br>From vibrant summer ensembles to cozy winter wear, our curated collections feature outfits that celebrate the unique beauty of each season. <br>Explore a wide range of styles, find tips on how to mix and match, and stay ahead of the fashion curve.</p>
                     <i class="fas fa-heart"></i>
                 </div>
                 <div class="right-content">
                     <div class="inner-main-content">
-                        <h1>special offer</h1>
-                        <p>black sleeves</p>
-                        <span>$3</span>
-                        <span>$3</span>
-                        <a href="#" class="shopnow-btn">shop now</a>
+                        <h1>trending fashion</h1>
+                        <p>weekely designs</p>
+                        <span>men</span>
+                        <span>women</span>
+                        <a href="#" class="shopnow-btn">view now</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--mainintro image ended -->
-
-    <!--my gallery -->
-    <div class="gallery">
-        <div class="inner-gallery">
-            <img src="images/gallery/gal1.jpg" alt="">
-        </div>
-        <div class="inner-gallery">
-            <img src="images/gallery/gal2.jpg" alt="">
-        </div>
-        <div class="inner-gallery">
-            <img src="images/gallery/gal3.jpg" alt="">
-        </div>
-        <div class="inner-gallery">
-            <img src="images/gallery/gal4.jpg" alt="">
-        </div>
-        <div class="inner-gallery">
-            <img src="images/gallery/gal5.jpg" alt="">
-        </div>
-        <div class="inner-gallery">
-            <img src="images/gallery/gal6.jpg" alt="">
+    
+    <!--my gallery slide -->
+    <div>
+        <h1 class="gallery">our main gallery</h1>
+        <div class="container swiper">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="images/gallery/gal1.jpg" alt="Gallery images" class="card-image">
+                            <p class="season">summer</p>
+                            <h2 class="card-titile">2024 collection</h2>
+                            <button class="button"><i  class="fa-sharp-duotone fa-solid fa-arrow-up-right-from-square" ></i></button>                   
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="images/gallery/gal2.jpg" alt="Gallery images" class="card-image">
+                            <p class="season">summer</p>
+                            <h2 class="card-titile">2024 collection</h2>
+                            <button class="button"><i  class="fa-sharp-duotone fa-solid fa-arrow-up-right-from-square" ></i></button>                   
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="images/gallery/gal3.jpg" alt="Gallery images" class="card-image">
+                            <p class="season">summer</p>
+                            <h2 class="card-titile">2024 collection</h2>
+                            <button class="button"><i  class="fa-sharp-duotone fa-solid fa-arrow-up-right-from-square" ></i></button>                   
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="images/gallery/gal4.jpg" alt="Gallery images" class="card-image">
+                            <p class="season">summer</p>
+                            <h2 class="card-titile">2024 collection</h2>
+                            <button class="button"><i  class="fa-sharp-duotone fa-solid fa-arrow-up-right-from-square" ></i></button>                   
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="images/gallery/gal5.jpg" alt="Gallery images" class="card-image">
+                            <p class="season">summer</p>
+                            <h2 class="card-titile">2024 collection</h2>
+                            <button class="button"><i  class="fa-sharp-duotone fa-solid fa-arrow-up-right-from-square" ></i></button>                   
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="images/gallery/gal6.jpg" alt="Gallery images" class="card-image">
+                            <p class="season">summer</p>
+                            <h2 class="card-titile">2024 collection</h2>
+                            <button class="button"><i  class="fa-sharp-duotone fa-solid fa-arrow-up-right-from-square" ></i></button>                   
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
     </div>
     <!--my gallery end -->
 
+    <!--small display banner -->
+    <div class="banner">
+        <div class="inner-banner">
+            <img src="images/banner.jpg" alt="">
+        </div>
+        <div class="inner-banner">
+            <h1>we offer a wide collection of styles from childrean fashion, men and also women </h1>
+            <a href="#" id="view-now">view now</a>
+        </div>
+    </div>
+    <!--small display banner end -->
+
+    <!--products display section -->
+
+    <div class="product-type">
+        <h1>product type</h1>
+        <div class="main-product">
+            <div class="inner-product">
+                <img src="images/banner.jpg" alt="">
+                <a href="#" id="shop-nnow">shop now</a>
+            </div>
+            <div class="inner-product">
+                <img src="images/banner.jpg" alt="">
+                <a href="#" id="shop-nnow">shop now</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!--products display section end-->
+
+    <!--featured products display section -->
+
+    <div class="featured-fashion">
+        <h1>Featured type</h1>
+        <div class="featured-product-products">
+            <div class="featured-inner-product">
+                <img src="images/banner.jpg" alt="">
+                <a href="#" id="shop-nnow">shop now</a>
+            </div>
+            <div class="featured-inner-product">
+                <img src="images/banner.jpg" alt="">
+                <a href="#" id="shop-nnow">shop now</a>
+            </div>
+        </div>
+    </div>
+    <!--featured products display section end-->
+
+    <!--news section -->
+    <div class="our-blog">
+        <h1>our blog and news</h1>
+        <div class="main-blog">
+            <div class="inner-blog">
+                <img src="images/new5.jpg" alt="">
+                <p>this is the nigerian fashion week trents </p>
+            </div>
+            <div class="inner-blog">
+                <img src="images/new4.jpg" alt="">
+                <p>this is the nigerian fashion week trents </p>
+            </div>
+        </div>
+    </div>
+    <!--news section end-->
 
 
 
@@ -123,6 +210,9 @@
 
 
 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

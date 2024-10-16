@@ -20,6 +20,7 @@ html{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,13 +52,21 @@ html{
     margin-left: 2rem;
     color: black;
     cursor: pointer;
-
 }
+
 .icons div:hover{
     background-color: var(--maincolor);
     color: white;
     border-radius: 10px;
     padding: 1rem 3rem ;
+}
+.icons #count{
+    text-align: center;
+    color: goldenrod;
+}
+.icons #count:hover{
+    color: aqua;
+
 }
 #menu-bar{
     display: none;
@@ -135,6 +144,7 @@ html{
 .right-content h1{
     font-size: 50px;
     letter-spacing: 3px;
+    color: aqua;
 }
 .left-inner{
     display: flex;
@@ -145,12 +155,16 @@ html{
 }
 .right-content{
     flex: 1 1 30rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
 }
 .right-content p{
     font-size: 1.5rem;
 }
 .right-content i{
     font-size: 4rem;
+    color: rgb(175, 53, 5);
 }
 .inner-main-content{
     background: black;
@@ -173,12 +187,226 @@ html{
 .shopnow-btn{
     display: block;
     padding: 1rem 2rem;
-    background-color: white;
+    background-color: aqua;
     width: 50%;
     border-radius: 15px;
     color: black;
     font-size: 1.7rem;
 }
+.gallery{
+    font-size: 36px;
+    text-align: center;
+    padding: 1rem 3rem;
+    
+}
+.gallery:hover{
+    cursor: pointer;
+    text-shadow: aqua;
+    font-size: 40px;
+
+}
+.card-wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+.card-list .card-item{
+    list-style: none;
+    margin: 10px;
+    flex: 1 0 auto;
+}
+.card-list{
+    display: flex;
+}
+.card-list .card-item .card-link{
+    width: 100%;
+    user-select: none;
+    display: block;
+    background: #c4c9cd;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 10px 10px rgb(29, 51, 51);
+    transition: 0.2s ease-in-out;
+}
+.card-list .card-item .card-link:active{
+    cursor: grabbing;
+}
+.card-list .card-item .card-link:hover{
+    box-shadow: 0 10px 10px rgb(31, 231, 231);
+}
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid aquamarine;
+
+}
+.card-list .card-link .season{
+    color: black;
+    background-color: bisque;
+    padding: 5px 10px;
+    font-weight: 500;
+    width: fit-content;
+    font-size: 2rem;
+    border-radius: 50px;
+    margin: 15px 0 18px;
+}
+.card-list .card-link .card-titile{
+    font-size: 3rem;
+    color: black;
+    font-weight: bolder ;
+
+}
+.card-list .card-link .button{
+    height: 45px;
+    width: 50px;
+    color: aqua;
+    background-color: black;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    border: 2px solid aquamarine;
+    cursor: pointer;
+} 
+.banner{
+    padding: 3rem 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: aquamarine;
+}
+.inner-banner{
+    flex: 1 1 45rem;
+}
+.inner-banner img{
+    width: 95%;
+    border: 10px;
+}
+.inner-banner h1{
+    font-size: 40px;
+    padding: .5rem 0;
+
+}
+.inner-banner a{
+    padding: 1rem 3rem;
+    background-color: black;
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-top: .5rem;
+    border-radius: 20px;
+}
+.product-type{
+    padding: 3rem 7%;
+}
+.product-type h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 1rem 0;
+}
+.main-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.inner-product{
+    flex: 1 1 30rem;
+    position: relative;
+}
+.inner-product a{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 1rem 3rem;
+    background: black;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    z-index: 100;
+}
+.inner-product img{
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid aquamarine;
+}
+.featured-fashion{
+    padding: 3rem 7%;
+}
+.featured-fashion h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 1rem 0;
+}
+.featured-product-products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.featured-inner-product{
+    flex: 1 1 30rem;
+    position: relative;
+}
+.featured-inner-product a{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 1rem 3rem;
+    background: black;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    z-index: 100;
+}
+.featured-inner-product img{
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid aquamarine;
+}
+.our-blog{
+    padding: 3rem 7%;
+}
+.our-blog h1{
+    font-size: 40px;
+    text-align: center;
+}
+.main-blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 15px;
+}
+.inner-blog{
+    flex: 1 1 45rem;
+    position: relative ;
+}
+.inner-blog img{
+    width: 50%;
+    height: 50%;
+    border: 10px;
+}
+.inner-blog p{
+    width: 50%;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    padding: 1rem;
+    position: absolute;
+    bottom: 1%;
+    left: 30%;
+    
+}
+
 
 
 
@@ -226,4 +454,10 @@ html{
         border-radius: 14px;
         width: 45rem;
     }
+    .card-wrapper{
+        margin: 0 10px 25px;
+    }
 }
+
+
+
