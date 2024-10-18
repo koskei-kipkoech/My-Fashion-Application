@@ -3,54 +3,90 @@
         "id":1,
         "name":"men short",
         "price":200,
-        "images":"images/banner.jpg"
+        "images":"images/banner.jpg",
+        "description": "A light and breezy summer dress perfect for warm weather.",
+        "season": "summer",
+        "gender": "men",
+        "ageGroup": "adults"
     },
     {
         "id":2,
         "name":"cloth",
         "price":250,
-        "images":"images/gallery/gal1.jpg"
+        "images":"images/gallery/gal1.jpg",
+        "description": "A light and breezy summer dress perfect for warm weather.",
+        "season": "spring",
+        "gender": "women",
+        "ageGroup": "adults"
     },
     {
         "id":3,
         "name":"MY jeans",
         "price":100,
-        "images":"images/gallery/gal2.jpg"
+        "images":"images/gallery/gal2.jpg",
+        "description": "A light and breezy summer dress perfect for warm weather.",
+        "season": "winter",
+        "gender": "men",
+        "ageGroup": "adults"
     },
     {
         "id":4,
         "name":"slippers",
         "price":22,
-        "images":"images/gallery/gal3.jpg"
+        "images":"images/gallery/gal3.jpg",
+        "description": "A light and breezy summer dress perfect for warm weather.",
+        "season": "summer",
+        "gender": "women",
+        "ageGroup": "adults"
     },
     {
         "id":5,
         "name":"MY bed",
         "price":400,
-        "images":"images/gallery/gal4.jpg"
+        "images":"images/gallery/gal4.jpg",
+        "description": "A light and breezy summer dress perfect for warm weather.",
+        "season": "spring",
+        "gender": "men",
+        "ageGroup": "adults"
     },
     {
         "id":6,
         "name":"sneekers",
         "price":350,
-        "images":"images/gallery/gal5.jpg"
+        "images":"images/gallery/gal5.jpg",
+        "description": "A light and breezy summer dress perfect for warm weather.",
+        "season": "winter",
+        "gender": "women",
+        "ageGroup": "adults"
     },
     {
         "id":7,
         "name":"boxers",
         "price":20,
-        "images":"images/gallery/gal6.jpg"
+        "images":"images/gallery/gal6.jpg",
+        "description": "A light and breezy summer dress perfect for warm weather.",
+        "season": "summer",
+        "gender": "men",
+        "ageGroup": "adults"
     },
     {
         "id":8,
         "name":"tshirt",
         "price":50,
-        "images":"images/bacnew.jpg"
+        "images":"images/bacnew.jpg",
+        "description": "A light and breezy summer dress perfect for warm weather.",
+        "season": "spring",
+        "gender": "women",
+        "ageGroup": "adults"
     },
     {
         "id":9,
         "name":"bras",
         "price":40,
-        "images":"images/all.jpg"
+        "images":"images/all.jpg",
+        "description": "A light and breezy summer dress perfect for warm weather.",
+        "season": "winter",
+        "gender": "men",
+        "ageGroup": "adults"
     }
 ]
