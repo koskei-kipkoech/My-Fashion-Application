@@ -53,6 +53,9 @@ html{
     color: black;
     cursor: pointer;
 }
+#count {
+    padding-left: 5px;
+}
 
 .icons div:hover{
     background-color: var(--maincolor);
@@ -62,8 +65,14 @@ html{
 }
 .icons #count{
     text-align: center;
-    color: goldenrod;
+    color: rgb(240, 69, 12);
+    padding-left: 5px;
+    border-radius: 40px;
+    top: 50%;
+    right: -20px;
+
 }
+
 .icons #count:hover{
     color: aqua;
 
@@ -78,7 +87,6 @@ html{
     left: 100%;
     width: 50%;
     right: 2rem;
-
 }
 .search-box.active{
     left: 30%;
@@ -88,26 +96,103 @@ html{
     width: 100%;
     border-radius: 15px;
     border: 0;
-    box-shadow: rgb(0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(5, 4, 4, 0.888) 0px 5px 15px;
 }
+body.showCart .shopping-cart{
+    inset: 0 0 0 auto;
+}
+
+/* body.showCart .shopping-cart{
+    transform: translateX(-10px);
+}  */
 .shopping-cart{
-    position: absolute;
-    top: 110%;
-    width: 40rem;
-    right: 2rem;
-    left: 100%;
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    inset: 0 -500px 0 auto;
+    background-color: grey;
+    color: rgb(255, 255, 255);
+    grid-template-rows: 70px 1fr 70px;
+    overflow: auto;
+    transition: right 0.3s ease;
+}
+.shopping-cart h1{
+    padding: 20px;
+    margin: 0;
+    font-size: large;
+    font-weight: 300;
+    color: black;
+}
+.shopping-cart .btn{
+    font-size: 30px;
+    display: grid;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    gap: 10px;
+    padding: 10px;
+    position: sticky;
+    grid-template-columns: repeat(2, 1fr);
+    z-index: 10;
+}
+.shopping-cart .btn .close{
+    color: antiquewhite;
+}
+.shopping-cart .btn button{
+    background-color: black;
+    color: aquamarine;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border: none;
+}
+.shopping-cart .shopping-box .item img{
+    width: 100%;
+    
+}
+.shopping-cart .shopping-box .item{
+    display: grid;
+    grid-template-columns: 70px 140px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.shopping-box{
+    position: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+    padding: .5rem;
+}
+.shopping-box .quantity{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.shopping-box .quantity span{
+    display: flex;
+    width: 20px;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    background-color: whitesmoke;
+    color: rgb(7, 7, 7);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.shopping-box .quantity span:nth-child(2){
+    background-color: transparent;
+}
+.shopping-box .item:nth-child(even){
+    background-color: #eee1;
+}
+.search-box{
+    overflow: auto;
 }
 .shopping-cart.active{
     left: 10%;
-}
-.shopping-box{
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: .5rem;
-}
-.shopping-box img{
-    width: 70%;
 }
 .fa-times{
     position: absolute;
@@ -308,32 +393,41 @@ html{
     padding: 1rem 0;
 }
 .main-product{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    
 }
-.inner-product{
+.main-product .inner-product{
     flex: 1 1 30rem;
     position: relative;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 20px;
 }
-.inner-product a{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    padding: 1rem 3rem;
-    background: black;
-    color: white;
-    font-size: 1.5rem;
-    border-radius: 15px;
-    z-index: 100;
+.main-product .inner-product h2{
+    font-weight: 500;
+    font-size: large;
 }
-.inner-product img{
-    width: 60%;
-    border-radius: 10px;
+.main-product .inner-product .price{
+    letter-spacing: 5px;
+    font-size: small;
+}
+.main-product .inner-product button{
+    background-color: black;
+    color:aqua;
+    border-radius: 20px;
+    padding:5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.main-product .inner-product img{
+    width: 100%;
+    height: 200px;
+    filter: drop-shadow( 0 50px 20px #0009);
+    border-radius: 5px;
     border: 1px solid aquamarine;
+    object-fit: cover;
 }
 .featured-fashion{
     padding: 3rem 7%;

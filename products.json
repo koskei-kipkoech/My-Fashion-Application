@@ -1,0 +1,56 @@
+[
+    {
+        "id":1,
+        "name":"men short",
+        "price":200,
+        "images":"images/banner.jpg"
+    },
+    {
+        "id":2,
+        "name":"cloth",
+        "price":250,
+        "images":"images/gallery/gal1.jpg"
+    },
+    {
+        "id":3,
+        "name":"MY jeans",
+        "price":100,
+        "images":"images/gallery/gal2.jpg"
+    },
+    {
+        "id":4,
+        "name":"slippers",
+        "price":22,
+        "images":"images/gallery/gal3.jpg"
+    },
+    {
+        "id":5,
+        "name":"MY bed",
+        "price":400,
+        "images":"images/gallery/gal4.jpg"
+    },
+    {
+        "id":6,
+        "name":"sneekers",
+        "price":350,
+        "images":"images/gallery/gal5.jpg"
+    },
+    {
+        "id":7,
+        "name":"boxers",
+        "price":20,
+        "images":"images/gallery/gal6.jpg"
+    },
+    {
+        "id":8,
+        "name":"tshirt",
+        "price":50,
+        "images":"images/bacnew.jpg"
+    },
+    {
+        "id":9,
+        "name":"bras",
+        "price":40,
+        "images":"images/all.jpg"
+    }
+]
