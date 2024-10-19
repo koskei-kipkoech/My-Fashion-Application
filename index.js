@@ -12,6 +12,11 @@ let iconSpanTab = document.querySelector('#count')
 let listProducts = []
 let carts = []
 
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Dom fully loaded and parsed')
+    atTheApp();
+})
+
 searchBar.addEventListener('click', () => {
     console.log('here clickkeed')
     searchBox.classList.toggle('active');
@@ -72,14 +77,65 @@ const addDataToHTML = () =>{
             newProduct.dataset.id = product.id;
             newProduct.innerHTML = `
             <img src="${product.images}" alt="">
-                <h2>${product.name}</h2>
-                <div class="price">$${product.price}</div>
-                <button class="addCart">add favourite</button>
+            <h2>${product.name}</h2>
+            <div class="price">$${product.price}</div>
+            <button class="viewMore"">View More</button>
+            <button class="addCart">add favourite</button>
             `
             listProductHTML.appendChild(newProduct)
+
+            const viewMoreButton = newProduct.querySelector('.viewMore')
+            viewMoreButton.addEventListener('click', () =>{
+                showExtraInfo(product.id)
+            })
         });
     }
 }
+const showExtraInfo = (productID) => {
+    const detailContainer = document.getElementById('product-details-container');
+    if (!detailContainer) {
+        console.error('Product details container not found');
+        return;
+    }
+    const product = listProducts.find(item => item.id == productID);
+    if (!product || !product.extraInfo) {
+        console.error('Product or extra info not found');
+        return;
+    }
+
+    detailContainer.innerHTML = `
+    <div class="extra-info">
+        <h2>${product.name} - Details</h2>
+        <img src="${product.images}" alt="${product.name}" style="width: 100%; border-radius: 10px;">
+        <p><strong>Rating:</strong> ${product.extraInfo.rating} ⭐</p>
+        <p><strong>Materials:</strong> ${product.extraInfo.materials}</p>
+        <p><strong>Description:</strong> ${product.extraInfo.description}</p>
+        <p><strong>Styling Tips:</strong> ${product.extraInfo.stylingTips}</p>
+        <form id="extra-info-form">
+            <label for="comments">Leave a Comment:</label>
+            <textarea id="comments" name="comments" rows="3" style="width: 100%;"></textarea>
+            <button type="submit" class="submit-comment">Submit Comment</button>
+        </form>
+        <button class="closeExtraInfo" onclick="hideExtraInfo()">Close</button>
+    </div>
+    `;
+    detailContainer.style.display = 'block';
+}
+
+const hideExtraInfo = () => {
+    const detailsContainer = document.getElementById('product-details-container')
+    detailsContainer.style.display = 'none'
+    detailsContainer.innerHTML = '';
+}
+document.addEventListener('submit',(event) => {
+    if(event.target.id === 'extra-info-form'){
+        event.preventDefault();
+        const comment  = document.getElementById('comments').value;
+        alert(`Comme Submitted: ${comment}`)
+        //didn't save my comments because it was part of my functionalities
+        document.getElementById('comments').value = ''
+    }
+})
 listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if(positionClick.classList.contains('addCart')){
@@ -200,7 +256,6 @@ const atTheApp = () => {
         alert('Failed to load products. Try again later')
     })
 }
-atTheApp()
 
 
 
