@@ -429,6 +429,46 @@ body.showCart .shopping-cart{
     border: 1px solid aquamarine;
     object-fit: cover;
 }
+.extra-info{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:  0 0 10px black;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+.extra-info h2 {
+    margin-bottom:  15px;
+}
+.extra-info img{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.extra-info form{
+    margin-top: 20px;
+}
+.extra-info button.submit-comment{
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#product-details-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: rgba(0, 0, 0.5);
+    display: none;
+    padding: 10px;
+}
 .featured-fashion{
     padding: 3rem 7%;
 }
