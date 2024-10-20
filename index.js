@@ -182,6 +182,37 @@ listCartHTML.addEventListener('click', (event) => {
         changeQuantity(product_id,type);
     }
 })
+function displayProducts(filterProducts){
+    const productContainer = document.querySelector('.inner-product')
+    productContainer.innerHTML = ''
+    filterProducts.forEach(product => {
+        const productElement = document.createElement('div')
+        productElement.classList.add('product')
+        productElement.innerHTML = `
+        <img src="${product.images}" alt="${product.name}" class="product-image">
+        <h2>${product.name}</h2>
+        <p>Price: $${product.price}</p>
+        <p>Season: ${product.season}</p>
+        <p>Gender: ${product.gender}</p>
+        `
+        productContainer.appendChild(productElement)
+    });
+};
+function filterProducts() {
+    const seasonFilter = document.getElementById('season-filter').value;
+    const genderFilter = document.getElementById('gender-filter').value;
+
+    const filteredProducts = listProducts.filter(product => {
+        const matchSeason = seasonFilter ? product.season === seasonFilter : true;
+        const matchGender = genderFilter ? product.gender === genderFilter : true;
+        return matchSeason && matchGender
+    })
+    displayProducts(filteredProducts)
+}
+document.getElementById('season-filter').addEventListener('change',filterProducts)
+document.getElementById('gender-filter').addEventListener('change', filterProducts)
+displayProducts(listProducts)
+
 const changeQuantity = (product_id, type) => {
     let positionOnItemInCart = carts.findIndex((value) => value.product_id == product_id);
     console.log('current cart',carts)
