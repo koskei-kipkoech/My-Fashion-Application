@@ -12,11 +12,11 @@
     <header class="header">
         <a href="#" id="logo">K<span>Fashion</span></a>
         <nav class="navbar">
-            <a href="#">home</a>
-            <a href="#">women</a>
-            <a href="#">men</a>
-            <a href="#">gallery</a>
-            <a href="#">contacts</a>
+            <a href="#home">home</a>
+            <a href="#products">products</a>
+            <a href="#banner1">banner</a>
+            <a href="#gallery1">gallery</a>
+            <a href="#contacts">contacts</a>
         </nav>
         <div class="icons">
             <div class="fas fa-bars" id="menu-bar"></div>
@@ -44,7 +44,7 @@
         <!--shopping cart ended -->
     </header>
     <!--maininto image ended -->
-    <div class="main-background">
+    <div class="main-background" id="home">
         <div class="left-back">
             <div class="left-inner">
                 <div class="right-content">
@@ -67,7 +67,7 @@
     <!--mainintro image ended -->
     
     <!--my gallery slide -->
-    <div>
+    <div id="gallery1">
         <h1 class="gallery">our main gallery</h1>
         <div class="container swiper">
             <div class="card-wrapper">
@@ -189,7 +189,7 @@
     <!--my gallery end -->
 
     <!--small display banner -->
-    <div class="banner">
+    <div class="banner" id="banner1">
         <div class="inner-banner">
             <img src="images/banner.jpg" alt="">
         </div>
@@ -203,7 +203,7 @@
 
     <!--products display section -->
 
-    <div class="product-type">
+    <div class="product-type" id="products">
         <h1>product type</h1>
         <!--filter section -->
         <div class="filter-btns">
@@ -246,21 +246,25 @@
     </div>
     <!--featured products display section end-->
 
-    <!--news section -->
-    <div class="our-blog">
-        <h1>our blog and news</h1>
-        <div class="main-blog">
-            <div class="inner-blog">
-                <img src="images/new5.jpg" alt="">
-                <p>this is the nigerian fashion week trents </p>
+    <!--comments section -->
+    
+    <div class="comments-section">
+        <h1>leave a comment</h1>
+        <form id="comment-form">
+            <textarea id="comment-input" placeholder="write your comment here..." required></textarea>
+            <button type="submit"> submit</button>
+        </form>
+        <div class="comments-slider swiper">
+            <div class="swiper-wrapper" id="comments-wrapper">
+                <!--comments will display here-->
             </div>
-            <div class="inner-blog">
-                <img src="images/new4.jpg" alt="">
-                <p>this is the nigerian fashion week trents </p>
-            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
-    <!--news section end-->
+    
+    <!--comments section end-->
 
 
 
