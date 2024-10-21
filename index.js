@@ -36,6 +36,35 @@ const atTheApp = () => {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Dom fully loaded and parsed')
     atTheApp();
+
+    const commentsSwiper = new Swiper('.comments-slider', {
+        loop:true,
+        pagination:{
+            el: '.swiper-pagination',
+            clickable:true,
+        },
+        navigation:{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+    });
+    const commentForm = document.getElementById('comment-form');
+    const commentInput = document.getElementById('comment-input');
+    const commentWrapper = document.getElementById('comments-wrapper');
+
+    commentForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const commentText = commentInput.value.trim();
+        if(commentText){
+            const commentSlide = document.createElement('div');
+            commentSlide.classList.add('swiper-slide');
+            commentSlide.textContent = commentText;
+
+            commentWrapper.appendChild(commentSlide)
+            commentInput.value = ''
+            commentsSwiper.update()
+        }
+    })
 })
 
 searchBar.addEventListener('click', () => {
