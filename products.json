@@ -6,7 +6,6 @@
         "images":"images/banner.jpg",
         "season": "summer",
         "gender": "men",
-        "ageGroup": "adults",
         "extraInfo":{
             "rating": 4.6,
             "description": "A light and breezy summer dress perfect for warm weather.",
@@ -22,7 +21,6 @@
         "images":"images/gallery/gal1.jpg",
         "season": "spring",
         "gender": "women",
-        "ageGroup": "children",
         "extraInfo":{
             "rating": 4.6,
             "description": "A light and breezy summer dress perfect for warm weather.",
@@ -39,7 +37,6 @@
         "images":"images/gallery/gal2.jpg",
         "season": "winter",
         "gender": "men",
-        "ageGroup": "adults",
         "extraInfo":{
             "rating": 4.6,
             "description": "A light and breezy summer dress perfect for warm weather.",
@@ -54,7 +51,6 @@
         "images":"images/gallery/gal3.jpg",
         "season": "summer",
         "gender": "women",
-        "ageGroup": "children",
         "extraInfo":{
             "rating": 4.6,
             "description": "A light and breezy summer dress perfect for warm weather.",
@@ -69,7 +65,6 @@
         "images":"images/gallery/gal4.jpg",
         "season": "spring",
         "gender": "men",
-        "ageGroup": "adults",
         "extraInfo":{
             "rating": 4.6,
             "description": "A light and breezy summer dress perfect for warm weather.",
@@ -84,7 +79,6 @@
         "images":"images/gallery/gal5.jpg",
         "season": "winter",
         "gender": "women",
-        "ageGroup": "adults",
         "extraInfo":{
             "rating": 4.6,
             "description": "A light and breezy summer dress perfect for warm weather.",
@@ -99,7 +93,6 @@
         "images":"images/gallery/gal6.jpg",
         "season": "summer",
         "gender": "men",
-        "ageGroup": "adults",
         "extraInfo":{
             "rating": 4.6,
             "description": "A light and breezy summer dress perfect for warm weather.",
@@ -114,7 +107,6 @@
         "images":"images/bacnew.jpg",
         "season": "spring",
         "gender": "women",
-        "ageGroup": "adults",
         "extraInfo":{
             "rating": 4.6,
             "description": "A light and breezy summer dress perfect for warm weather.",
@@ -129,7 +121,6 @@
         "images":"images/all.jpg",
         "season": "winter",
         "gender": "men",
-        "ageGroup": "adults",
         "extraInfo":{
             "rating": 4.6,
             "description": "A light and breezy summer dress perfect for warm weather.",
