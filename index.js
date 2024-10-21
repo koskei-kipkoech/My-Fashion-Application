@@ -87,6 +87,22 @@ new Swiper('.card-wrapper', {
         },
     }
 });
+document.querySelectorAll('.card-item').forEach(card => {
+    const likeButton = card.querySelector('.button');
+    const likeCountElement = card.querySelector('.likecount');
+    const productId = card.dataset.id;
+
+    let likeCount = parseInt(localStorage.getItem(`likeCount-${productId}`)) || 0;
+    likeCountElement.textContent = `${likeCount} likes`;
+
+    likeButton.addEventListener('click', (event) => {
+        event.preventDefault(); //prevent refreshing
+        likeCount++;
+        likeCountElement.textContent = `${likeCount} likes`;
+
+        localStorage.setItem(`likeCount-${productId}`,likeCount)
+    })
+})
 
 const addDataToHTML = () =>{
     listProductHTML.innerHTML = ''
