@@ -6,6 +6,7 @@ let menuBar = document.querySelector('#menu-bar');
 let myNav = document.querySelector('.navbar');
 let body = document.querySelector('body')
 let closeCart = document.querySelector('.close')
+//const allFilterItems
 let listProductHTML = document.querySelector('.main-product')
 let listCartHTML = document.querySelector('.shopping-box')
 let iconSpanTab = document.querySelector('#count')
