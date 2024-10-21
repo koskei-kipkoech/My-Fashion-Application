@@ -185,22 +185,46 @@ listCartHTML.addEventListener('click', (event) => {
 function displayProducts(filterProducts){
     const productContainer = document.querySelector('.inner-product')
     productContainer.innerHTML = ''
-    filterProducts.forEach(product => {
-        const productElement = document.createElement('div')
-        productElement.classList.add('product')
-        productElement.innerHTML = `
-        <img src="${product.images}" alt="${product.name}" class="product-image">
-        <h2>${product.name}</h2>
-        <p>Price: $${product.price}</p>
-        <p>Season: ${product.season}</p>
-        <p>Gender: ${product.gender}</p>
-        `
-        productContainer.appendChild(productElement)
-    });
+    if(filterProducts.length > 0){
+        filterProducts.forEach(product => {
+            const productElement = document.createElement('div')
+            productElement.classList.add('product')
+            productElement.innerHTML = `
+            <img src="${product.images}" alt="${product.name}" class="product-image">
+            <h2>${product.name}</h2>
+            <p>Price: $${product.price}</p>
+            <p>Season: ${product.season}</p>
+            <p>Gender: ${product.gender}</p>
+            `
+            productContainer.appendChild(productElement)
+        });
+    }else{
+        productContainer.innerHTML = '<p>No Product Found<p>'
+    }
+    openFilterModal();
 };
+function openFilterModal(){
+    const filterModal = document.getElementById('filter-modal')
+    filterModal.style.display = 'flex'
+}
+window.addEventListener('click',(event) =>{
+    const filterModal = document.getElementById('filter-modal');
+    if(event.target === filterModal){
+        closeFilterModal();
+    }
+});
 function filterProducts() {
     const seasonFilter = document.getElementById('season-filter').value;
     const genderFilter = document.getElementById('gender-filter').value;
+
+    if(seasonFilter === "" && genderFilter ===""){
+        displayProducts(listProducts)
+        return;
+    }
+    if(seasonFilter && genderFilter !==""){
+        openFilterForm(seasonFilter)
+        return;
+    }
 
     const filteredProducts = listProducts.filter(product => {
         const matchSeason = seasonFilter ? product.season === seasonFilter : true;
@@ -209,8 +233,51 @@ function filterProducts() {
     })
     displayProducts(filteredProducts)
 }
-document.getElementById('season-filter').addEventListener('change',filterProducts)
-document.getElementById('gender-filter').addEventListener('change', filterProducts)
+function openFilterForm(season){
+    const filterModal = document.getElementById('filter-modal');
+    if(filterModal){
+        filterModal.style.display = 'flex'
+    }else{
+        console.log('filter modal element not found')
+    }
+    filterModal.innerHTML =`
+    <div class="modal-content">
+            <span class="close-modal" onclick="closeFilterModal()">&times;</span>
+            <h2>Special Filters for ${season} Collection</h2>
+            <form id="season-filter-form">
+                <label for="additional-option">Choose an additional option:</label>
+                <select id="additional-option">
+                    <option value="trendy">Trendy</option>
+                    <option value="classic">Classic</option>
+                    <option value="sporty">Sporty</option>
+                </select>
+                <button type="submit">Apply</button>
+            </form>
+        </div>
+    `;
+    filterModal.style.display = 'flex'
+
+    document.getElementById('season-filter-form').addEventListener('submit',(event) =>{
+        event.preventDefault();
+        const additionalOption = document.getElementById('additional-option').value;
+        applyAdditionalFilter(season,additionalOption);
+        closeFilterModal();
+    })
+}
+function applyAdditionalFilter(season,option){
+    const filteredProducts = listProducts.filter(product => {
+        product.season === season && product.category === option
+    });
+    displayProducts(filteredProducts)
+}
+function closeFilterModal(){
+    const filterModal = document.getElementById('filter-modal');
+    filterModal.style.display = 'none';
+    filterModal.innerHTML = '';
+}
+
+// document.getElementById('season-filter').addEventListener('change',filterProducts)
+// document.getElementById('gender-filter').addEventListener('change', filterProducts)
 displayProducts(listProducts)
 
 const changeQuantity = (product_id, type) => {
