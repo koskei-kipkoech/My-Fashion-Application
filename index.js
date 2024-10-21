@@ -6,13 +6,33 @@ let menuBar = document.querySelector('#menu-bar');
 let myNav = document.querySelector('.navbar');
 let body = document.querySelector('body')
 let closeCart = document.querySelector('.close')
-//const allFilterItems
-let listProductHTML = document.querySelector('.main-product')
+const allFilterItems = document.querySelector('.inner-product') //new
+const allFilterBtns = document.querySelectorAll('.filter-btn')//new
+let listProductHTML = document.querySelector('.main-product ')//new
 let listCartHTML = document.querySelector('.shopping-box')
 let iconSpanTab = document.querySelector('#count')
 let listProducts = []
 let carts = []
+const atTheApp = () => {
+    fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+        listProducts = data;
+        addDataToHTML()
 
+        //check the local storage for saved favourite 
+        if (localStorage.getItem('cart')){
+            carts =  JSON.parse(localStorage.getItem('cart'));
+            addCartToHTML()
+        }else{
+            carts = []
+        }
+    })
+    .catch(error =>{
+        console.log('Error fetching',error)
+        alert('Failed to load products. Try again later')
+    })
+}
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Dom fully loaded and parsed')
     atTheApp();
@@ -79,6 +99,8 @@ const addDataToHTML = () =>{
             newProduct.innerHTML = `
             <img src="${product.images}" alt="">
             <h2>${product.name}</h2>
+            <h2>${product.season}</h2>
+            <h2>${product.gender}</h2>
             <div class="price">$${product.price}</div>
             <button class="viewMore"">View More</button>
             <button class="addCart">add favourite</button>
@@ -94,10 +116,7 @@ const addDataToHTML = () =>{
 }
 const showExtraInfo = (productID) => {
     const detailContainer = document.getElementById('product-details-container');
-    if (!detailContainer) {
-        console.error('Product details container not found');
-        return;
-    }
+
     const product = listProducts.find(item => item.id == productID);
     if (!product || !product.extraInfo) {
         console.error('Product or extra info not found');
@@ -132,7 +151,7 @@ document.addEventListener('submit',(event) => {
     if(event.target.id === 'extra-info-form'){
         event.preventDefault();
         const comment  = document.getElementById('comments').value;
-        alert(`Comme Submitted: ${comment}`)
+        alert(`Comme Submitted:❤️❤️ ${comment} ❤️❤️`)
         //didn't save my comments because it was part of my functionalities
         document.getElementById('comments').value = ''
     }
@@ -183,7 +202,33 @@ listCartHTML.addEventListener('click', (event) => {
         changeQuantity(product_id,type);
     }
 })
+//filter button
+allFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        showFilteredContent(btn);
+    })
+})
+function showFilteredContent(btn){
+    const filter = btn.id;
+    //remove active class
+    const allFilteredBtns = document.querySelectorAll('.filter-btn')
+    allFilteredBtns.forEach(button => {
+        button.classList.remove('active')
+    });
 
+    btn.classList.add('active')
+
+    listProducts.forEach(product => {
+        const productElement = document.querySelector(`.inner-product[data-id="${product.id}"]`);
+        if(filter === 'all' || product.season === filter || product.gender === filter){
+            productElement.style.display = 'block'
+        }else{
+            productElement.style.display = 'none';
+        }
+    })
+}
+
+//filter end
 const changeQuantity = (product_id, type) => {
     let positionOnItemInCart = carts.findIndex((value) => value.product_id == product_id);
     console.log('current cart',carts)
@@ -238,26 +283,7 @@ const addCartToHTML = () => {
     }
     iconSpanTab.innerText = totalQuantity
 }
-const atTheApp = () => {
-    fetch('products.json')
-    .then(response => response.json())
-    .then(data => {
-        listProducts = data;
-        addDataToHTML()
 
-        //check the local storage for saved favourite 
-        if (localStorage.getItem('cart')){
-            carts =  JSON.parse(localStorage.getItem('cart'));
-            addCartToHTML()
-        }else{
-            carts = []
-        }
-    })
-    .catch(error =>{
-        console.log('Error fetching',error)
-        alert('Failed to load products. Try again later')
-    })
-}
 
 
 
