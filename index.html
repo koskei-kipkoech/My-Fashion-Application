@@ -222,6 +222,11 @@
             </div>
             
         </div>
+        <div class="pagination">
+            <button id="prevPage" disabled>previous</button>
+            <span id="currentPage">1</span>
+            <button id="nextPage">next</button>
+        </div>
         <div id="product-details-container" style="display: none;">
             <!-- products extra info will display here  -->
         </div>
@@ -265,6 +270,47 @@
     </div>
     
     <!--comments section end-->
+
+<!--contact form start-->
+    <section class="contact">
+        <div class="container">
+            <h1>contact us</h1>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>send us a message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="your name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="your email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="" placeholder="your meessage...."></textarea>
+                        </div>
+                        <button type="submit">send message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>contact information</h3>
+                    <p><i class="fas fa-phone"></i> +254 758 306 675</p>
+                    <p><i class="fas fa-envelope"></i>patrickwayy@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i>nairobi kenya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--pop up for message recieved -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h3>😊 message sent 😊</h3>
+            <p>your message has been sent successfully 👍</p>
+            <button id="close-popup">ok</button>
+        </div>
+    </div>
+
+<!--contact form end-->
 
 
 
