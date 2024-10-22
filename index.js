@@ -181,6 +181,25 @@ document.getElementById('prevPage').addEventListener('click', () => {
     addDataToHTML(currentPage)
 });
 
+const popUp = document.getElementById('popup')
+const closePopUpButton = document.getElementById('close-popup')
+const contactForm = document.querySelector('.contact-form form')
+
+contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    popUp.style.display = 'block'
+    console.log('popup should be visible', popUp.style.display);
+    contactForm.reset();
+});
+closePopUpButton.addEventListener('click', () => {
+    popUp.style.display = 'none'
+});
+popUp.addEventListener('click', (event) =>{
+    if (event.target ===popUp){
+        popUp.style.display = 'none'
+    }
+})
+
 
 const showExtraInfo = (productID) => {
     const detailContainer = document.getElementById('product-details-container');
