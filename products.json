@@ -1,69 +1,67 @@
 [
     {
         "id":1,
-        "name":"men short",
+        "name":"casual linen shirt",
         "price":200,
-        "images":"images/banner.jpg",
+        "images":"images/gallery/caual-linen.png",
         "season": "summer",
         "gender": "men",
         "extraInfo":{
-            "rating": 4.6,
-            "description": "A light and breezy summer dress perfect for warm weather.",
-            "materials": "Polyester, Cotton",
-            "stylingTips": "Great for layering over a t-shirt or a lightweight sweater."
+            "rating": 4.7,
+            "description": "A lightweight linen shirt that keeps you cool on hot summer days.",
+            "materials": "100% Linen",
+            "stylingTips": "Pair with chinos for a relaxed yet stylish look."
         }
         
     },
     {
         "id":2,
-        "name":"cloth",
+        "name":"Chino shorts",
         "price":250,
-        "images":"images/gallery/gal1.jpg",
-        "season": "spring",
-        "gender": "women",
-        "extraInfo":{
-            "rating": 4.6,
-            "description": "A light and breezy summer dress perfect for warm weather.",
-            "materials": "Polyester, Cotton",
-            "stylingTips": "Great for layering over a t-shirt or a lightweight sweater."
+        "images":"images/gallery/chino.png",
+        "season": "summer",
+        "gender": "men",
+        "extraInfo": {
+            "rating": 4.5,
+            "description": "Comfortable chino shorts that offer a modern fit.",
+            "materials": "Cotton, Spandex",
+            "stylingTips": "Combine with a graphic tee for a casual outfit."
         }
-
-
     },
     {
         "id":3,
-        "name":"MY jeans",
+        "name":"lightweightswim trunks",
         "price":100,
-        "images":"images/gallery/gal2.jpg",
-        "season": "winter",
+        "images":"images/gallery/trunks.png",
+        "season": "summer",
         "gender": "men",
         "extraInfo":{
-            "rating": 4.6,
-            "description": "A light and breezy summer dress perfect for warm weather.",
-            "materials": "Polyester, Cotton",
-            "stylingTips": "Great for layering over a t-shirt or a lightweight sweater."
-        }
+            "rating": 4.8,
+        "description": "Quick-dry swim trunks for beach and pool days.",
+        "materials": "Polyester",
+        "stylingTips": "Wear with a tank top for a perfect beach look."
+    }
     },
     {
         "id":4,
-        "name":"slippers",
+        "name":"graphic tree",
         "price":22,
-        "images":"images/gallery/gal3.jpg",
+        "images":"images/gallery/grahic.png",
         "season": "summer",
-        "gender": "women",
+        "gender": "men",
         "extraInfo":{
-            "rating": 4.6,
-            "description": "A light and breezy summer dress perfect for warm weather.",
-            "materials": "Polyester, Cotton",
-            "stylingTips": "Great for layering over a t-shirt or a lightweight sweater."
+            "rating": 4.3,
+            "description": "Comfortable flip flops for beach outings.",
+            "materials": "Rubber",
+            "stylingTips": "Perfect for wearing with shorts and a t-shirt."
         }
     },
     {
         "id":5,
-        "name":"MY bed",
+        "name":"flip flops",
         "price":400,
-        "images":"images/gallery/gal4.jpg",
-        "season": "spring",
+        "images":"images/gallery/flipflop.png",
+        "season": "summer",
         "gender": "men",
         "extraInfo":{
             "rating": 4.6,
@@ -73,12 +71,12 @@
         }
     },
     {
-        "id":6,
-        "name":"sneekers",
+        "id": 6,
+        "name":"lightweight hoodies",
         "price":350,
-        "images":"images/gallery/gal5.jpg",
-        "season": "winter",
-        "gender": "women",
+        "images":"images/gallery/lightweight.png",
+        "season": "summer",
+        "gender": "men",
         "extraInfo":{
             "rating": 4.6,
             "description": "A light and breezy summer dress perfect for warm weather.",
@@ -88,44 +86,521 @@
     },
     {
         "id":7,
-        "name":"boxers",
+        "name":"casual sneakers",
         "price":20,
-        "images":"images/gallery/gal6.jpg",
+        "images":"images/gallery/casual.png",
         "season": "summer",
         "gender": "men",
         "extraInfo":{
-            "rating": 4.6,
-            "description": "A light and breezy summer dress perfect for warm weather.",
-            "materials": "Polyester, Cotton",
-            "stylingTips": "Great for layering over a t-shirt or a lightweight sweater."
+            "rating": 4.5,
+            "description": "Stylish and comfortable sneakers for everyday wear.",
+            "materials": "Canvas, Rubber",
+            "stylingTips": "Great with jeans or shorts for a sporty look."
         }
     },
     {
         "id":8,
-        "name":"tshirt",
+        "name":"short-sleeve button-up",
         "price":50,
-        "images":"images/bacnew.jpg",
-        "season": "spring",
-        "gender": "women",
+        "images":"images/gallery/short-sleeve.png",
+        "season": "summer",
+        "gender": "men",
         "extraInfo":{
-            "rating": 4.6,
-            "description": "A light and breezy summer dress perfect for warm weather.",
-            "materials": "Polyester, Cotton",
-            "stylingTips": "Great for layering over a t-shirt or a lightweight sweater."
+            "rating": 4.4,
+            "description": "A stylish button-up shirt perfect for summer outings.",
+            "materials": "Cotton, Linen",
+            "stylingTips": "Dress it up with chinos or down with shorts."
         }
     },
     {
-        "id":9,
-        "name":"bras",
-        "price":40,
-        "images":"images/all.jpg",
+        "id": 9,
+        "name": "Spring Casual Shirt",
+        "price": 300,
+        "images": "images/gallery/spring-casual.png",
+        "season": "spring",
+        "gender": "men",
+        "extraInfo": {
+            "rating": 4.7,
+            "description": "A breathable cotton shirt perfect for casual outings in spring.",
+            "materials": "Cotton, Linen",
+            "stylingTips": "Pair with light chinos and loafers for a relaxed look."
+        }
+    },
+    {
+        "id": 10,
+        "name": "Lightweight Jacket",
+        "price": 450,
+        "images": "images/gallery/lightweight-spring.jpg",
+        "season": "spring",
+        "gender": "men",
+        "extraInfo": {
+            "rating": 4.8,
+            "description": "A stylish jacket perfect for layering during breezy spring days.",
+            "materials": "Polyester, Nylon",
+            "stylingTips": "Layer over a t-shirt and jeans for a casual but polished look."
+        }
+    },
+    {
+        "id": 11,
+        "name": "Spring Chinos",
+        "price": 350,
+        "images": "images/gallery/chinos-spring.jpg",
+        "season": "spring",
+        "gender": "men",
+        "extraInfo": {
+            "rating": 4.6,
+            "description": "Comfortable and lightweight chinos for any spring outing.",
+            "materials": "Cotton, Spandex",
+            "stylingTips": "Pair with a polo shirt or casual button-down for a sharp yet easy-going style."
+        }
+    },
+    {
+        "id": 12,
+        "name": "Spring Sneakers",
+        "price": 280,
+        "images": "images/gallery/springSneekers.png",
+        "season": "spring",
+        "gender": "men",
+        "extraInfo": {
+            "rating": 4.5,
+            "description": "Versatile sneakers designed for comfort and style during spring.",
+            "materials": "Canvas, Rubber",
+            "stylingTips": "Wear with rolled-up jeans or chinos for a casual look."
+        }
+    },
+    {
+        "id": 13,
+        "name": "Printed T-shirt",
+        "price": 150,
+        "images": "images/gallery/printed.png",
+        "season": "spring",
+        "gender": "men",
+        "extraInfo": {
+            "rating": 4.4,
+            "description": "A vibrant printed t-shirt to add a pop of color to your spring wardrobe.",
+            "materials": "Cotton",
+            "stylingTips": "Perfect for pairing with jeans or shorts on warm days."
+        }
+    },
+    {
+        "id": 14,
+        "name": "Winter Parka",
+        "price": 450,
+        "images": "images/gallery/winter-parka.png",
         "season": "winter",
         "gender": "men",
-        "extraInfo":{
+        "extraInfo": {
+            "rating": 4.8,
+            "description": "A thick, insulated parka with a faux-fur hood, perfect for extreme cold.",
+            "materials": "Nylon, Down",
+            "stylingTips": "Pair with heavy boots and gloves for maximum warmth."
+        }
+    },
+    {
+        "id": 15,
+        "name": "Wool Overcoat",
+        "price": 350,
+        "images": "images/gallery/wool.jpg",
+        "season": "winter",
+        "gender": "men",
+        "extraInfo": {
+            "rating": 4.7,
+            "description": "A classic wool overcoat with a tailored fit, ideal for both formal and casual settings.",
+            "materials": "Wool, Polyester",
+            "stylingTips": "Wear over a suit or with jeans and a sweater for a versatile look."
+        }
+    },
+    {
+        "id": 16,
+        "name": "Thermal Sweater",
+        "price": 150,
+        "images": "images/gallery/thermal.png",
+        "season": "winter",
+        "gender": "men",
+        "extraInfo": {
+            "rating": 4.5,
+            "description": "A cozy thermal sweater designed to keep you warm while looking stylish.",
+            "materials": "Cotton, Wool",
+            "stylingTips": "Layer with a shirt and jacket for added warmth."
+        }
+    },
+    {
+        "id": 17,
+        "name": "Insulated Boots",
+        "price": 200,
+        "images": "images/gallery/insulated.png",
+        "season": "winter",
+        "gender": "men",
+        "extraInfo": {
+            "rating": 4.9,
+            "description": "Waterproof and insulated boots with a rugged sole for icy conditions.",
+            "materials": "Leather, Rubber",
+            "stylingTips": "Pair with thick wool socks for extra warmth."
+        }
+    },
+    {
+        "id": 18,
+        "name": "Puffer Jacket",
+        "price": 300,
+        "images": "images/gallery/puff.png",
+        "season": "winter",
+        "gender": "men",
+        "extraInfo": {
+            "rating": 4.8,
+            "description": "A lightweight yet extremely warm puffer jacket with a water-resistant exterior.",
+            "materials": "Nylon, Synthetic Fill",
+            "stylingTips": "Wear with slim-fit jeans for a modern, streamlined look."
+        }
+    },
+    {
+        "id": 19,
+        "name": "Fleece-lined Hoodie",
+        "price": 100,
+        "images": "images/gallery/fleece.png",
+        "season": "winter",
+        "gender": "men",
+        "extraInfo": {
+            "rating": 4.3,
+            "description": "A casual fleece-lined hoodie that provides comfort and warmth for everyday wear.",
+            "materials": "Cotton, Fleece",
+            "stylingTips": "Great for layering under a heavier jacket or wearing on its own in milder winter weather."
+        }
+    },
+    {
+        "id": 20,
+        "name": "Casual Linen Shirt",
+        "price": 200,
+        "images": "images/gallery/casualwomen.png",
+        "season": "summer",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.7,
+            "description": "A lightweight linen shirt that keeps you cool on hot summer days.",
+            "materials": "100% Linen",
+            "stylingTips": "Pair with chinos for a relaxed yet stylish look."
+        }
+    },
+    {
+        "id": 21,
+        "name": "Floral Maxi Dress",
+        "price": 300,
+        "images": "images/gallery/floral.jpg",
+        "season": "summer",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.8,
+            "description": "A flowy floral maxi dress perfect for beach outings or summer events.",
+            "materials": "Cotton, Silk",
+            "stylingTips": "Wear with sandals and a sunhat for a breezy summer style."
+        }
+    },
+    {
+        "id": 22,
+        "name": "Sleeveless Tank Top",
+        "price": 120,
+        "images": "images/gallery/sleeveless.webp",
+        "season": "summer",
+        "gender": "women",
+        "extraInfo": {
             "rating": 4.6,
-            "description": "A light and breezy summer dress perfect for warm weather.",
+            "description": "A comfortable tank top for casual summer days.",
+            "materials": "Cotton",
+            "stylingTips": "Pair with denim shorts for a laid-back look."
+        }
+    },
+    {
+        "id": 23,
+        "name": "Straw Hat",
+        "price": 50,
+        "images": "images/gallery/hat.png",
+        "season": "summer",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.5,
+            "description": "A wide-brimmed straw hat to keep the sun at bay while adding style.",
+            "materials": "Straw",
+            "stylingTips": "Great for pairing with dresses and casual beachwear."
+        }
+    },
+    {
+        "id": 24,
+        "name": "High-Waisted Shorts",
+        "price": 180,
+        "images": "images/gallery/high-waist.jpg",
+        "season": "summer",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.9,
+            "description": "Comfortable, stylish high-waisted shorts for warm days.",
+            "materials": "Denim, Polyester",
+            "stylingTips": "Match with a crop top or tucked-in blouse for a modern look."
+        }
+    },
+    {
+        "id": 25,
+        "name": "Espadrille Sandals",
+        "price": 100,
+        "images": "images/gallery/essssssss.png",
+        "season": "summer",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.7,
+            "description": "Lightweight and stylish espadrilles for summer comfort.",
+            "materials": "Canvas, Rubber",
+            "stylingTips": "Perfect with a maxi dress or denim skirt."
+        }
+    },
+    {
+        "id": 26,
+        "name": "Light Cotton Scarf",
+        "price": 60,
+        "images": "images/gallery/cotton.png",
+        "season": "summer",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.4,
+            "description": "A soft cotton scarf, great for adding a pop of color to any outfit.",
+            "materials": "Cotton",
+            "stylingTips": "Drape it over your shoulders for light protection against the sun."
+        }
+    },
+    {
+        "id": 27,
+        "name": "Off-Shoulder Top",
+        "price": 140,
+        "images": "images/gallery/off-sholder.png",
+        "season": "summer",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.5,
+            "description": "A trendy off-shoulder top for summer parties and gatherings.",
             "materials": "Polyester, Cotton",
-            "stylingTips": "Great for layering over a t-shirt or a lightweight sweater."
+            "stylingTips": "Pair with high-waisted jeans for a chic summer vibe."
+        }
+    },
+    {
+        "id": 28,
+        "name": "Light Trench Coat",
+        "price": 350,
+        "images": "images/gallery/trench.png",
+        "season": "spring",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.9,
+            "description": "A stylish, lightweight trench coat for cooler spring days.",
+            "materials": "Cotton, Polyester",
+            "stylingTips": "Wear over a dress or with jeans for an elegant spring look."
+        }
+    },
+    {
+        "id": 29,
+        "name": "Floral Midi Skirt",
+        "price": 220,
+        "images": "images/gallery/midi.png",
+        "season": "spring",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.7,
+            "description": "A flowy floral midi skirt perfect for spring outings.",
+            "materials": "Cotton, Silk",
+            "stylingTips": "Pair with a tucked-in blouse or a light sweater."
+        }
+    },
+    {
+        "id": 30,
+        "name": "Long-Sleeve Blouse",
+        "price": 180,
+        "images": "images/gallery/blouse.jpg",
+        "season": "spring",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.5,
+            "description": "A breathable blouse for springtime comfort.",
+            "materials": "Cotton",
+            "stylingTips": "Tuck into jeans for a casual chic look."
+        }
+    },
+    {
+        "id": 31,
+        "name": "Denim Jacket",
+        "price": 300,
+        "images": "images/gallery/denim.webp",
+        "season": "spring",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.8,
+            "description": "A trendy denim jacket for layering on breezy spring days.",
+            "materials": "Denim",
+            "stylingTips": "Layer over a floral dress or with leggings."
+        }
+    },
+    {
+        "id": 32,
+        "name": "Rain Boots",
+        "price": 150,
+        "images": "images/gallery/rain.jpg",
+        "season": "spring",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.9,
+            "description": "Waterproof rain boots for those April showers.",
+            "materials": "Rubber",
+            "stylingTips": "Pair with a cute raincoat for a stylish rainy day look."
+        }
+    },
+    {
+        "id": 33,
+        "name": "Striped Tee",
+        "price": 100,
+        "images": "images/gallery/tee.jpg",
+        "season": "spring",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.3,
+            "description": "A casual striped tee, perfect for layering in spring.",
+            "materials": "Cotton",
+            "stylingTips": "Tuck into jeans or layer under a light jacket."
+        }
+    },
+    {
+        "id": 34,
+        "name": "Cardigan Sweater",
+        "price": 180,
+        "images": "images/gallery/cardigan.png",
+        "season": "spring",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.6,
+            "description": "A cozy cardigan for cool spring evenings.",
+            "materials": "Cotton, Wool",
+            "stylingTips": "Wear over a light dress or with casual slacks."
+        }
+    },
+    {
+        "id": 35,
+        "name": "Floral Printed Scarf",
+        "price": 70,
+        "images": "images/gallery/floPrinted.png",
+        "season": "spring",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.4,
+            "description": "A lightweight floral printed scarf, perfect for spring layers.",
+            "materials": "Silk",
+            "stylingTips": "Drape over a denim jacket for a fresh spring look."
+        }
+    },
+    {
+        "id": 36,
+        "name": "Puffer Jacket",
+        "price": 400,
+        "images": "images/gallery/puffwomen.png",
+        "season": "winter",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.8,
+            "description": "A warm, insulated puffer jacket to keep you cozy during winter.",
+            "materials": "Nylon, Down",
+            "stylingTips": "Pair with leggings and boots for a stylish winter look."
+        }
+    },
+    {
+        "id": 37,
+        "name": "Woolen Sweater",
+        "price": 300,
+        "images": "images/gallery/woolenn.png",
+        "season": "winter",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.7,
+            "description": "A thick woolen sweater to combat chilly weather.",
+            "materials": "Wool, Cotton",
+            "stylingTips": "Wear over a turtleneck for extra warmth."
+        }
+    },
+    {
+        "id": 38,
+        "name": "Thermal Leggings",
+        "price": 180,
+        "images": "images/gallery/thermal.jpg",
+        "season": "winter",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.6,
+            "description": "Thermal leggings that provide warmth without sacrificing style.",
+            "materials": "Polyester, Spandex",
+            "stylingTips": "Pair with a long coat and winter boots for a cozy yet sleek look."
+        }
+    },
+    {
+        "id": 39,
+        "name": "Faux Fur Coat",
+        "price": 600,
+        "images": "images/gallery/furr.png",
+        "season": "winter",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.9,
+            "description": "A luxurious faux fur coat for staying warm in style.",
+            "materials": "Faux Fur, Polyester",
+            "stylingTips": "Perfect for evening winter events with a pair of heeled boots."
+        }
+    },
+    {
+        "id": 40,
+        "name": "Knit Beanie",
+        "price": 50,
+        "images": "images/gallery/knit.png",
+        "season": "winter",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.5,
+            "description": "A knitted beanie to keep your head warm on chilly days.",
+            "materials": "Wool",
+            "stylingTips": "Wear with a matching scarf and gloves."
+        }
+    },
+    {
+        "id": 41,
+        "name": "Wool Scarf",
+        "price": 90,
+        "images": "images/gallery/scawool.png",
+        "season": "winter",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.6,
+            "description": "A soft wool scarf that adds both warmth and elegance.",
+            "materials": "Wool",
+            "stylingTips": "Pair with a long winter coat for a classic winter look."
+        }
+    },
+    {
+        "id": 42,
+        "name": "Shearling Boots",
+        "price": 250,
+        "images": "images/gallery/shearling.png",
+        "season": "winter",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.8,
+            "description": "Cozy shearling-lined boots for winter comfort.",
+            "materials": "Leather, Shearling",
+            "stylingTips": "Pair with skinny jeans or leggings."
+        }
+    },
+    {
+        "id": 43,
+        "name": "Cable-Knit Cardigan",
+        "price": 200,
+        "images": "images/gallery/cable-knit.png",
+        "season": "winter",
+        "gender": "women",
+        "extraInfo": {
+            "rating": 4.7,
+            "description": "A chunky cable-knit cardigan for staying warm indoors and out.",
+            "materials": "Wool, Acrylic",
+            "stylingTips": "Layer over a thermal top for extra coziness."
         }
     }
+
 ]

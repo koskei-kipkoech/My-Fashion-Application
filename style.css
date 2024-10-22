@@ -795,6 +795,7 @@ body.showCart .shopping-cart{
     width: 100%;
     padding: 40px 0;
     background-color: black;
+    margin-top: 10px;
 }
 .footer .social{
     text-align: center;
