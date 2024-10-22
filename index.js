@@ -15,12 +15,14 @@ let listProducts = []
 let carts = []
 let currentPage = 1;
 const productsPerPage = 9;
+let currentProductlist = []
 
 const atTheApp = () => {
     fetch('products.json')
     .then(response => response.json())
     .then(data => {
         listProducts = data;
+        currentProductlist = listProducts;
         addDataToHTML(currentPage)
 
         //check the local storage for saved favourite 
@@ -50,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         },
+
     });
     const commentForm = document.getElementById('comment-form');
     const commentInput = document.getElementById('comment-input');
@@ -68,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             commentsSwiper.update()
         }
     })
+    applyFilter()
 })
 
 searchBar.addEventListener('click', () => {
@@ -136,13 +140,14 @@ document.querySelectorAll('.card-item').forEach(card => {
     })
 })
 
-const addDataToHTML = (page =1) =>{
+const addDataToHTML = (page =1 , productToDisplay = currentProductlist) => {
     listProductHTML.innerHTML = ''
-    const startIndex = (page-1) * productsPerPage;
+    const startIndex = (page - 1) * productsPerPage;
     const endindex = page * productsPerPage;
-    const productToDisplay = listProducts.slice(startIndex,endindex);
-    if(productToDisplay.length > 0){
-        productToDisplay.forEach(product => {
+    const paginatedProducts = productToDisplay.slice(startIndex,endindex);
+
+    if(paginatedProducts.length > 0){
+        paginatedProducts.forEach(product => {
             let newProduct = document.createElement('div')
             newProduct.classList.add('inner-product')
             newProduct.dataset.id = product.id;
@@ -164,21 +169,27 @@ const addDataToHTML = (page =1) =>{
         });
     }
     document.getElementById('currentPage').textContent = currentPage;
-    updatePaginationButtons();
-
+    updatePaginationButtons(productToDisplay.length);
 }
-const updatePaginationButtons = () =>{
-    const totalPages = Math.ceil(listProducts.length / productsPerPage);
+const applyFilter = () => {
+    allFilterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            showFilteredContent(btn);
+        })
+    })
+}
+const updatePaginationButtons = (totalProducts) =>{
+    const totalPages = Math.ceil(totalProducts / productsPerPage);
     document.getElementById('prevPage').disabled = currentPage ===1;
     document.getElementById('nextPage').disabled = currentPage === totalPages
 };
 document.getElementById('nextPage').addEventListener('click', () => {
     currentPage++;
-    addDataToHTML(currentPage)
+    addDataToHTML(currentPage, currentProductlist)
 });
 document.getElementById('prevPage').addEventListener('click', () => {
     currentPage--;
-    addDataToHTML(currentPage)
+    addDataToHTML(currentPage, currentProductlist)
 });
 
 const popUp = document.getElementById('popup')
@@ -298,21 +309,21 @@ allFilterBtns.forEach(btn => {
 function showFilteredContent(btn){
     const filter = btn.id;
     //remove active class
-    const allFilteredBtns = document.querySelectorAll('.filter-btn')
-    allFilteredBtns.forEach(button => {
+    allFilterBtns.forEach(button => {
         button.classList.remove('active')
     });
 
     btn.classList.add('active')
 
-    listProducts.forEach(product => {
-        const productElement = document.querySelector(`.inner-product[data-id="${product.id}"]`);
-        if(filter === 'all' || product.season === filter || product.gender === filter){
-            productElement.style.display = 'block'
+    currentProductlist = listProducts.filter(product => {
+        if(filter === 'all'){
+            return true
         }else{
-            productElement.style.display = 'none';
+            return product.season === filter || product.gender === filter;
         }
     })
+    currentPage = 1;
+    addDataToHTML(currentPage,currentProductlist)
 }
 
 //filter end
@@ -373,12 +384,3 @@ const addCartToHTML = () => {
 
 
 
-
-
-
-
-//fetching code for items 
-
-// fetch("https://fakestoreapi.com/products")
-// .then((res) => res.json())
-// .then((json) => console.log(json));
