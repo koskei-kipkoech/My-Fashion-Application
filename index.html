@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body class="">
     <header class="header">
@@ -280,13 +282,13 @@
                     <h3>send us a message</h3>
                     <form>
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="your name">
+                            <input type="text" name="name" placeholder="your name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="your email">
+                            <input type="email" name="email" placeholder="your email" required>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" id="" placeholder="your meessage...."></textarea>
+                            <textarea name="message" id="" placeholder="your meessage...." required></textarea>
                         </div>
                         <button type="submit">send message</button>
                     </form>
@@ -302,7 +304,7 @@
     </section>
 
     <!--pop up for message recieved -->
-    <div id="popup" class="popup">
+    <div id="popup" class="popup" style="display: none;">
         <div class="popup-content">
             <h3>😊 message sent 😊</h3>
             <p>your message has been sent successfully 👍</p>
@@ -311,6 +313,40 @@
     </div>
 
 <!--contact form end-->
+<!--footer start-->
+<footer class="footer">
+    <div class="social">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="https://www.linkedin.com/in/patrick-kipkoech"><i class='bx bxl-linkedin-square' ></i></a>
+        <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+        <a href="https://twitter.com/patrickkip22"><i class='bx bxl-twitter' ></i></a>
+        <a href="https://github.com/koskei-kipkoech"><i class='bx bxl-github' ></i></a>
+        <a href="mailto: patrickwayy@gmail.com"><i class='bx bx-envelope' ></i></a>
+        <a href="#"><i class='bx bxl-whatsapp-square' ></i></i></a>
+        <a href="#"><i class='bx bxl-skype' ></i></i></a>
+
+    </div>
+    <ul class="list">
+        <li>
+            <a href="#">FAQ</a>
+        </li>
+        <li>
+            <a href="#">products</a>
+        </li>
+        <li>
+            <a href="#gallery1">gallery</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+        <li></li>
+            <a href="#">Privacy Policy</a>
+        </li>
+    </ul>
+    <p class="copyright">© 2024 Patrick | Kipkoech</p>
+</footer>
+<!--footer end-->
+
 
 
 
