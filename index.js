@@ -13,12 +13,15 @@ let listCartHTML = document.querySelector('.shopping-box')
 let iconSpanTab = document.querySelector('#count')
 let listProducts = []
 let carts = []
+let currentPage = 1;
+const productsPerPage = 9;
+
 const atTheApp = () => {
     fetch('products.json')
     .then(response => response.json())
     .then(data => {
         listProducts = data;
-        addDataToHTML()
+        addDataToHTML(currentPage)
 
         //check the local storage for saved favourite 
         if (localStorage.getItem('cart')){
@@ -133,13 +136,15 @@ document.querySelectorAll('.card-item').forEach(card => {
     })
 })
 
-const addDataToHTML = () =>{
+const addDataToHTML = (page =1) =>{
     listProductHTML.innerHTML = ''
-    if(listProducts.length > 0){
-        listProducts.forEach(product => {
+    const startIndex = (page-1) * productsPerPage;
+    const endindex = page * productsPerPage;
+    const productToDisplay = listProducts.slice(startIndex,endindex);
+    if(productToDisplay.length > 0){
+        productToDisplay.forEach(product => {
             let newProduct = document.createElement('div')
             newProduct.classList.add('inner-product')
-            //newProduct.dataset.id = product_id; 
             newProduct.dataset.id = product.id;
             newProduct.innerHTML = `
             <img src="${product.images}" alt="">
@@ -158,7 +163,25 @@ const addDataToHTML = () =>{
             })
         });
     }
+    document.getElementById('currentPage').textContent = currentPage;
+    updatePaginationButtons();
+
 }
+const updatePaginationButtons = () =>{
+    const totalPages = Math.ceil(listProducts.length / productsPerPage);
+    document.getElementById('prevPage').disabled = currentPage ===1;
+    document.getElementById('nextPage').disabled = currentPage === totalPages
+};
+document.getElementById('nextPage').addEventListener('click', () => {
+    currentPage++;
+    addDataToHTML(currentPage)
+});
+document.getElementById('prevPage').addEventListener('click', () => {
+    currentPage--;
+    addDataToHTML(currentPage)
+});
+
+
 const showExtraInfo = (productID) => {
     const detailContainer = document.getElementById('product-details-container');
 
