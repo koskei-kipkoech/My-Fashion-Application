@@ -11,6 +11,7 @@ const allFilterBtns = document.querySelectorAll('.filter-btn')//new
 let listProductHTML = document.querySelector('.main-product ')//new
 let listCartHTML = document.querySelector('.shopping-box')
 let iconSpanTab = document.querySelector('#count')
+
 let listProducts = []
 let carts = []
 let currentPage = 1;
@@ -23,7 +24,7 @@ const atTheApp = () => {
     .then(data => {
         listProducts = data;
         currentProductlist = listProducts;
-        addDataToHTML(currentPage)
+        addDataToHTML(currentPage, currentProductlist)
 
         //check the local storage for saved favourite 
         if (localStorage.getItem('cart')){
@@ -71,6 +72,29 @@ document.addEventListener('DOMContentLoaded', () => {
             commentsSwiper.update()
         }
     })
+   // console.log('initial productrs', listProducts)
+    const searchInput = document.getElementById('search-input')
+   // console.log('listproduct', listProducts);
+
+    searchInput.addEventListener('keydown', (event) => {
+        console.log('keyprressed',event.key)
+        if(event.key === 'Enter'){
+            const searchTerm = event.target.value.toLowerCase().trim();
+            console.log('search term ', searchTerm)
+            const filteredProducts = listProducts.filter( product => {
+                console.log('products', product)
+                return(
+                    product.name.toLowerCase().includes(searchTerm) ||
+                    product.season.toLowerCase().includes(searchTerm) ||
+                    product.gender.toLowerCase().includes(searchTerm)
+                );
+            });
+            console.log('filtered products', filteredProducts)
+            currentPage = 1;
+            currentProductlist = filteredProducts
+            addDataToHTML(currentPage,filteredProducts)
+        }
+    })
     applyFilter()
 })
 
@@ -78,6 +102,10 @@ searchBar.addEventListener('click', () => {
     console.log('here clickkeed')
     searchBox.classList.toggle('active');
 })
+//event for search
+
+
+//event for search end
 saveBar.addEventListener('click', () => {
     body.classList.toggle('showCart')
 })
@@ -140,7 +168,8 @@ document.querySelectorAll('.card-item').forEach(card => {
     })
 })
 
-const addDataToHTML = (page =1 , productToDisplay = currentProductlist) => {
+const addDataToHTML = (page = 1 , productToDisplay = currentProductlist) => {
+    //console.log('product to display', productToDisplay)
     listProductHTML.innerHTML = ''
     const startIndex = (page - 1) * productsPerPage;
     const endindex = page * productsPerPage;
@@ -167,7 +196,10 @@ const addDataToHTML = (page =1 , productToDisplay = currentProductlist) => {
                 showExtraInfo(product.id)
             })
         });
+    }else{
+        listProductHTML.innerHTML = '<p>no product found<p>'
     }
+
     document.getElementById('currentPage').textContent = currentPage;
     updatePaginationButtons(productToDisplay.length);
 }
@@ -181,7 +213,7 @@ const applyFilter = () => {
 const updatePaginationButtons = (totalProducts) =>{
     const totalPages = Math.ceil(totalProducts / productsPerPage);
     document.getElementById('prevPage').disabled = currentPage ===1;
-    document.getElementById('nextPage').disabled = currentPage === totalPages
+    document.getElementById('nextPage').disabled = currentPage === totalPages || totalProducts === 0
 };
 document.getElementById('nextPage').addEventListener('click', () => {
     currentPage++;
